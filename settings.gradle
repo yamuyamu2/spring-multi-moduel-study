@@ -1,0 +1,5 @@
+rootProject.name = 'spring-multi-module-study'
+include 'eureka'
+include 'untitled'
+include 'eureka'
+

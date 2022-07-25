@@ -1,8 +1,17 @@
 server:
-  port: 80
+  port: 8080
 spring:
   application:
     name: gateway-server
+  cloud:
+    gateway:
+      routes:
+        - id: service-car-sharing
+          uri: lb://SERVICE-CAR-SHARING
+          predicates:
+            - Path=/service-carsharing/**
+          filters:
+            - RewritePath=/service-carsharing/(?<path>.*),/$\{path}
 
 eureka:
   client:

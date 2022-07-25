@@ -1,4 +1,5 @@
 rootProject.name = 'spring-multi-module-study'
 include 'eureka'
 include 'gateway'
+include 'carsharing'
 

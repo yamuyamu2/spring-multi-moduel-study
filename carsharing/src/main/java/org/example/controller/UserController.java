@@ -23,10 +23,9 @@ public class UserController {
     public ResponseEntity userSignUp(@RequestBody UserVO userVO) {
         UserDto userDto = modelMapper.map(userVO, UserDto.class);
         userService.registerUser(userDto);
-        System.out.println(userDto.getPassword());
-        System.out.println(userDto.getEmail());
         return ResponseEntity.status(HttpStatus.CREATED)
                              .body(userDto);
     }
+
 
 }

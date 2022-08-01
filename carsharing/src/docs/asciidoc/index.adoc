@@ -9,3 +9,7 @@
 ifndef::snippets[]
 :snippets: ./build/generated-snippets
 endif::[]
+
+[[Member]]
+== createMember api
+operation::user-sign-up[snippets='http-request,curl-request,request-body,request-fields,http-response,response-body,response-fields']

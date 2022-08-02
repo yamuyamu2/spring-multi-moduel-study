@@ -24,7 +24,12 @@ public class UserServiceImp implements UserService {
     public boolean registerUser(UserDto userDto) {
         try {
             userDto.setPassword(passwordEncoder.encode(userDto.getPassword()));
-            User user = modelMapper.map(userDto, User.class);
+            User user = User.builder()
+                                .email(userDto.getEmail())
+                                .password(userDto.getPassword())
+                                .build();
+
+
             userRepository.save(user);
             return true;
         } catch (Exception e) {

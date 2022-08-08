@@ -47,6 +47,8 @@ public class sharingCar extends BaseEntity{
     @Comment("차량 소속 아이디")
     private Integer CorpId;
 
+    @Comment("Test")
+    private String test;
 
 
 }
